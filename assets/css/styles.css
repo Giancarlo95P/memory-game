@@ -1,0 +1,32 @@
+body{
+    background-color: #9715dd;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: "Poppins", sans-serif;
+}
+
+.text-index {
+    color: black; /* Color tomate */
+}
+
+
+.hover-effect img {
+    transition: transform 0.3s;
+}
+
+.hover-effect img:hover {
+    transform: scale(1.1); /* Aumenta la imagen al pasar el mouse */
+}
+
+.hover-effect a {
+    transition: color 0.3s;
+}
+
+.hover-effect a:hover {
+    color: white;
+    background-color: black;
+    border-color: #010307; /* Cambia a un color tomate */
+}
