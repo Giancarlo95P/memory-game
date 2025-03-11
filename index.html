@@ -3,9 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
-</head>
-<body>
+    <title>Memorama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     
+</head>
+
+<body class="bg-yellow-300 flex items-center justify-center min-h-screen flex-col">
+
+    <section class="start-container text-center mb-10" id="startContainer">
+        <h1 class="text-2xl md:text-6xl text-blue-600 font-bold mb-6">Memorama</h1>
+        <div class="flex flex-col gap-4">
+            <button id="startButton" class="bg-blue-500 text-white text-lg px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 w-1/2 mx-auto">Start Game</button>
+            <button id="rankingButton" class="bg-blue-500 text-white text-lg px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 w-1/2 mx-auto">Ranking</button>
+        </div>
+    </section>
+            
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg w-11/12 md:w-1/2 lg:w-1/3 p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-gray-700">Configurations</h2>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">&times;</button>
+            </div>
+            <div class="mb-4">
+                <p class="text-gray-600">User:</p>
+                <input type="text" placeholder="Type your name" class="w-full border-2 border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500">
+            </div>
+            <div class="mb-4">
+                <p class="text-gray-600">Themes:</p>
+                <select id="themeSelect" class="w-full border-2 border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500">
+                    <option>Animals</option>
+                    <option>Images</option>
+                    <option>Memes</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <p class="text-gray-600">Level:</p>
+                <select id="levelSelect" class="w-full border-2 border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500">
+                    <option value="8">Easy</option>
+                    <option value="12">Medium</option>
+                    <option value="16">Hard</option>
+                </select>
+            </div>
+            <div class="flex justify-center">
+                <button  class="bg-gray-500 text-white px-4 py-2 rounded mr-2 hover:bg-gray-700">Home</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" id="goButton">Go!</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="game-container w-full max-w-2xl bg-white shadow-md rounded-lg p-6 hidden" id="gameContainer">
+        <div class="game-header flex justify-between items-center mb-4">
+            <div class="stats text-gray-600">
+                <span>Moves: <span id="moves">0</span></span>
+                <span class="ml-4">Time: <span id="time">0:00</span></span>
+            </div>
+            <button id="homeButton" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">Home</button>
+        </div>
+        <div class="memory-game grid grid-cols-4 gap-4" id="memoryGame"></div>
+    </section>
+
+    <section class="score-container w-full max-w-2xl bg-white shadow-md rounded-lg p-6 mt-10 hidden" id="scoreContainer">
+        <p class="text-xl font-bold text-center mb-6">Score</p>
+        <div class="overflow-hidden rounded-lg">
+            <table class="w-full border-collapse">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Posición</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Usuario</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tiempo</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Intentos</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 text-center">
+                    <tr>
+                        <td class="px-6 py-4">1</td>
+                        <td class="px-6 py-4">Usuario A</td>
+                        <td class="px-6 py-4">00:45</td>
+                        <td class="px-6 py-4">3</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4">2</td>
+                        <td class="px-6 py-4">Usuario B</td>
+                        <td class="px-6 py-4">01:02</td>
+                        <td class="px-6 py-4">5</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4">3</td>
+                        <td class="px-6 py-4">Usuario C</td>
+                        <td class="px-6 py-4">01:15</td>
+                        <td class="px-6 py-4">4</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4">4</td>
+                        <td class="px-6 py-4">Usuario D</td>
+                        <td class="px-6 py-4">01:30</td>
+                        <td class="px-6 py-4">6</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4">5</td>
+                        <td class="px-6 py-4">Usuario E</td>
+                        <td class="px-6 py-4">01:30</td>
+                        <td class="px-6 py-4">6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class=" text-gray text-center p-4 mt-auto">
+        <p>&copy; 2025 Group 2. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="/assets/js/index.js"></script>
 </body>
 </html>

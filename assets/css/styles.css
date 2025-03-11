@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+section{
+    height: 100%;
+}
+
+#startContainer{
+    margin-top: 300px;
+}
+
+#gameContainer{
+    margin-top: 100px;
+}
