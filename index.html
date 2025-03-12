@@ -19,7 +19,7 @@
         <h2 class="fs-5 fw-bold">Configuración del juego</h2>
         <div class="container p-3 pb-4">
             <label class="fs-6 fw-ligth text-start d-block pb-2">Tema</label>
-            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+            <select id="temaSelect" class="form-select form-select-lg mb-3" aria-label="Large select example">
             <option value="1">Animales</option>
             <option value="2">Emojis</option>
             <option value="3">Países</option>
@@ -27,25 +27,25 @@
             <option value="5">Comida</option>
         </select>
         </div>
-        <div class="container p-3 pb-4">
+        <div class="container p-3 pb-2">
             <label class="fs-6 fw-ligth text-start d-block pb-2">Dificultad</label>
-            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+            <select id="levelSelect" class="form-select form-select-lg mb-3" aria-label="Large select example">
             <option value="1">Fácil (4x4)</option>
             <option value="2">Medio (6x6)</option>
             <option value="3">Difícil (8x8)</option>
         </select>
         </div>
-        <div class="container p-3 pb-2">
+        <div class="container p-3 pb-1">
             <label class="fs-6 fw-ligth text-start d-block pb-2">Modo de Juego</label>
             <div class="d-grid gap-2 d-md-flex justify-content-between">
-            <button type="button" class="fs-6 fw-ligth btn btn-primary btn-primary-option w-100 py-3" onclick="activarBoton(this)"><i class="bi bi-person me-1"></i>Solo</button>
-            <button type="button" class="fs-6 fw-ligth btn btn-primary btn-primary-option  w-100" onclick="activarBoton(this)"><i class="bi bi-people me-1"></i>1 vs 1</button>
-            <button type="button" class="btn btn-primary btn-primary-option  w-100" onclick="activarBoton(this)"><i class="bi bi-display me-1"></i>1 vs PC</button>
+            <button type="button" class="fs-6 fw-ligth btn btn-primary btn-primary-option w-100 py-4" onclick="activeButton(this)"><i class="bi bi-person me-1"></i>Solo</button>
+            <button type="button" class="fs-6 fw-ligth btn btn-primary btn-primary-option  w-100" onclick="activeButton(this)"><i class="bi bi-people me-1"></i>1 vs 1</button>
+            <button type="button" class="btn btn-primary btn-primary-option  w-100" onclick="activeButton(this)"><i class="bi bi-display me-1"></i>1 vs PC</button>
             </div>
         </div>
         <div class="container p-3 px-0">
             <div class="d-grid gap-2 p-3">
-            <button type="button" class="btn btn-primary btn-primary-start w-100 fs-6"><i class="bi bi-play me-2 fs-4"></i>Iniciar Juego</button>
+            <button type="button" class="btn btn-primary btn-primary-start w-100 fs-6"  onclick="saveOptions()"><i class="bi bi-play me-2 fs-4"></i>Iniciar Juego</button>
             <button type="button" class="btn btn-primary btn-primary-score w-100 fs-6"><i class="bi bi-trophy me-2 fs-5"></i>Tabla de puntajes</button>
             </div>
         </div>
