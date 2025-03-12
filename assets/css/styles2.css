@@ -7,3 +7,43 @@ body{
     align-items: center; 
     font-family: "Poppins", sans-serif;
 }
+.btn-primary-option{
+    background-color: white;
+    border-color: #E5E7EB;
+    color:black;
+}
+
+.btn-primary-start {
+    background-color: #4F46E5;
+    border: none;
+    
+}
+
+.btn-primary-score {
+    background-color: #F59E0B;
+    border: none;
+}
+
+.btn-primary-option-select {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: #6366F1;
+    border-color: #6366F1;
+}
+
+.btn-primary-option:hover{
+    background-color:  #6366F1;
+    border: none;
+}
+
+.btn-primary-start:hover {
+    background-color: #4F46E5;
+    border: none;
+    color: black;
+    
+}
+
+.btn-primary-score:hover {
+    background-color: #F59E0B;
+    border: none;
+    color: black;
+}
