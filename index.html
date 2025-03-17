@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/output.css">
-    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/src/app.css"> -->
+    <title>Memora</title>
 </head>
 <body>
-    <main class="flex justify-center items-center h-screen bg-gradient-to-b from-purple-500 to-indigo-700">
-        <section class="grid grid-cols-2 gap-1">
-            <img class="w-40" src="/assets/src/svg/circle.svg" alt="">
-            <img class="w-40" src="/assets/src/svg/plus.svg" alt="">
-            <img class="w-40" src="/assets/src/svg/triangle.svg" alt="">
-            <img class="w-40 animate-bounce" src="/assets/src/svg/gooo.svg" alt="">
+    <main class="flex flex-col justify-center items-center h-screen bg-gradient-to-b from-purple-500 to-indigo-700">
+        <h1 class="text-white text-4xl font-bold mb-10">Memorama</h1>
+        <section class="grid grid-cols-2 gap-1 p-5">
+            <img class="w-40 animate-flip-horizontal" src="/assets/src/svg/circle.svg" alt="">
+            <img class="w-40 animate-flip-vertical" src="/assets/src/svg/plus.svg" alt="">
+            <img class="w-40 animate-flip-vertical-reverse" src="/assets/src/svg/triangle.svg" alt="">
+            <img class="w-40 animate-bounce " src="/assets/src/svg/gooo.svg" alt="">
         </section>
+        <button class="w-xs text-lg font-semibold text-white bg-amber-500 p-3 mt-20 rounded-sm shadow-xl cursor-pointer animate-pulse"><a href="configuration.html">Start Game</a></button>
     </main>
 </body>
 </html>
