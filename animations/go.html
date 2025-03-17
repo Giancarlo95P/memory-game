@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="flex flex-col items-center justify-center min-h-screen">
+    <div class="grid grid-cols-2 grid-rows-2">
+      <!-- En caso de querer hacer los cuadros más pequeños solo modificar en width y height en sus respectivas clases -->
+      <img src="svg/circle.svg" alt="" class="w-50 h-50 circle" />
+      <img src="svg/plus.svg" alt="" class="w-50 h-50 plus" />
+      <img src="svg/triangle.svg" alt="" class="w-50 h-50 triangle" />
+      <img src="svg/gooo.svg" alt="" class="w-50 h-50 go" />
+    </div>
+    <!-- Librería GSAP para animaciones -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="js/goAnimation.js"></script>
+  </body>
+</html>
