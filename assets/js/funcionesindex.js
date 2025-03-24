@@ -17,5 +17,4 @@ function saveOptions() {
     localStorage.setItem('level', level);
     localStorage.setItem('modoJuego', gameType);
     console.log("¡Configuración guardada correctamente!");
-
 }
