@@ -38,28 +38,28 @@
                                 <label class="block text-gray-600 mb-1">Tema</label>
                                 <select class="w-full h-auto p-2 rounded-sm bg-white text-gray-600">
                                     <option value="0">Todos</option>
-                                    <option value="1">Animales</option>
-                                    <option value="2">Países</option>
-                                    <option value="3">Deportes</option>
-                                    <option value="4">Comida</option>
+                                    <option value="poke">Pokemón</option>
+                                    <option value="paises">Países</option>
+                                    <option value="deportes">Deportes</option>
+                                    <option value="comida">Comida</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-gray-600 mb-1">Dificultad</label>
                                 <select class="w-full h-auto p-2 rounded-sm bg-white text-gray-600">
                                     <option value="0">Todos</option>
-                                    <option value="1">Fácil (4x4)</option>
-                                    <option value="2">Medio (6x6)</option>
-                                    <option value="3">Difícil (8x8)</option>
+                                    <option value="4x4">Fácil (4x4)</option>
+                                    <option value="6x6">Medio (6x6)</option>
+                                    <option value="8x8">Difícil (8x8)</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-gray-600 mb-1">Modo</label>
                                 <select class="w-full h-auto p-2 rounded-sm bg-white text-gray-600">
-                                    <option value="0">Todos</option>
-                                    <option value="1">Solo</option>
-                                    <option value="2">1 vs 1</option>
-                                    <option value="3">1 vs PC</option>
+                                    <option value="todos">Todos</option>
+                                    <option value="solo">Solo</option>
+                                    <option value="1vs1">1 vs 1</option>
+                                    <option value="1vsPC">1 vs PC</option>
                                 </select>
                             </div>
                         </div>
@@ -67,18 +67,25 @@
                     <div > <!-- Resultados -->
                         <table class="min-w-full mt-5">
                             <thead class="bg-gray-50">
-                                <th class="text-gray-500 font-medium py-3 text-xs">RANK</th>
-                                <th class="text-gray-500 font-medium py-3 text-xs">JUGADOR</th>
-                                <th class="text-gray-500 font-medium py-3 text-xs">TEMA</th>
-                                <th class="text-gray-500 font-medium py-3 text-xs">DIFICULTAD</th>
-                                <th class="text-gray-500 font-medium py-3 text-xs">TIEMPO</th>
-                                <th class="text-gray-500 font-medium py-3 text-xs">INTENTOS</th>
-                                <th class="text-gray-500 font-medium py-3 text-xs">PUNTOS</th>
+                                <tr>
+                                    <th class="text-gray-500 font-medium py-3 text-xs">RANK</th>
+                                    <th class="text-gray-500 font-medium py-3 text-xs">JUGADOR</th>
+                                    <th class="text-gray-500 font-medium py-3 text-xs">TEMA</th>
+                                    <th class="text-gray-500 font-medium py-3 text-xs">DIFICULTAD</th>
+                                    <th class="text-gray-500 font-medium py-3 text-xs">TIEMPO</th>
+                                    <th class="text-gray-500 font-medium py-3 text-xs">INTENTOS</th>
+                                    <th class="text-gray-500 font-medium py-3 text-xs">PUNTOS</th>
+                                </tr>
                             </thead>
+                            <tbody id="tablaCuerpo" class="text-center text-sm text-gray-700 bg-white">
+                                <!-- Las filas de puntaje aparecerán aquí dinámicamente -->
+                            </tbody>
                         </table>
                     </div>
                 </div>
             </div> <!-- Fin de Tabla de puntaje -->
         </div>
     </div>
+
+    <script src="assets/js/score-board.js"></script>
 </body>
