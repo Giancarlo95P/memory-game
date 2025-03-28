@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"> <!-- CDN para carga de icons -->
+    <title>Memory Game</title>
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center min-h-screen w-full bg-gradient-to-b from-purple-500 to-indigo-700 text-white p-4">
+        <h1 class="text-4xl font-bold mb-7">Memorama</h1>
+        <div class="w-full md:w-4xl">
+            <div class="flex justify-between mb-4">
+                <button class="flex items-center bg-gray-700 py-2 px-4 rounded-lg hover:bg-gray-800 cursor-pointer gap-2"><a href="index.html"><i class="bi bi-house-door"></i> Menú</a></button>
+                <button class="flex items-center bg-gray-700 py-2 px-4 rounded-lg hover:bg-gray-800 cursor-pointer gap-2" id="pauseBtn"><i class="bi bi-pause-circle"></i>Pausar</button>
+            </div>
+            <div class="flex justify-between bg-white py-2 px-4 rounded-xl shadow">
+                <div class="flex gap-2 justify-center items-center">
+                    <i class="bi bi-stopwatch text-indigo-600"></i>
+                    <div>
+                        <p class="text-gray-600">Tiempo</p>
+                        <span id="timer" class="text-black font-bold">00:00</span>
+                    </div>
+                </div>
+                <div class="flex gap-2 justify-center items-center">
+                    <i class="bi bi-heart text-red-500"></i>
+                    <div>
+                        <p class="text-gray-600">Intentos</p>
+                        <span id="intentos" class="text-black font-bold">0</span>
+                    </div>
+                </div>
+                <div class="flex gap-2 justify-center items-center">
+                    <i class="bi bi-check-circle-fill text-green-600"></i>
+                    <div>
+                        <p class="text-gray-600">Parejas</p>
+                        <span id="parejas" class="text-black font-bold">0 / 8</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative bg-gray-800/50 h-auto md:w-full md:h-xl rounded-xl mt-4 grid grid-cols-4 gap-3 p-4 shadow-2xl"> <!-- Aqui tenemos que renderizar las card según la elección del jugador -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/underScore.js"></script>
+    <script src="/assets/js/board-game.js"></script>
+</body>
+</html>
